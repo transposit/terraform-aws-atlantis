@@ -140,6 +140,10 @@ resource "aws_ssm_parameter" "atlantis_github_user_token" {
   value = var.atlantis_github_user_token
 
   tags = local.tags
+
+  lifecycle = {
+    ignore_changes = [ value ]
+  }
 }
 
 resource "aws_ssm_parameter" "atlantis_gitlab_user_token" {
