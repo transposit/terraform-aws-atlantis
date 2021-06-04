@@ -141,7 +141,7 @@ resource "aws_ssm_parameter" "atlantis_github_user_token" {
 
   tags = local.tags
 
-  lifecycle = {
+  lifecycle {
     ignore_changes = [ value ]
   }
 }
