@@ -50,6 +50,10 @@ output "ecs_security_group" {
   value       = module.atlantis_sg.this_security_group_id
 }
 
+output "ecs_cluster" {
+  value = module.ecs.this_ecs_cluster_id
+}
+
 # VPC
 output "vpc_id" {
   description = "ID of the VPC that was created or passed in"
